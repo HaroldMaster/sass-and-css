@@ -1,4 +1,5 @@
 $grid-margins: (0px, 50px);
+$grid-margins-mobile: (0px, 20px);
 $grid-container-width: 100%;
 $grid-container-height: 100%;
 $grid-container-item-height: 160px;
@@ -34,3 +35,8 @@ $button-height: 100%;
     color: $font-color-button-hover;
   }
 }
+@media (max-width: 480px) {
+  .grid {
+    margin: nth($grid-margins-mobile, 1) nth($grid-margins-mobile, 2);
+  }
+ }

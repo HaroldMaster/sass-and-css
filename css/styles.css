@@ -17,12 +17,19 @@ body {
   display: inline-block;
   margin: 0px -15px 10px 5px;
   width: 33.33%;
+  overflow-wrap: break-word;
+  overflow: hidden;
 }
 .header__column img {
   max-width: 150px;
   height: 100px;
 }
 
+@media (max-width: 480px) {
+  .header {
+    font-size: 10px;
+  }
+}
 .grid {
   margin: 0px 50px;
 }
@@ -54,6 +61,11 @@ body {
   color: black;
 }
 
+@media (max-width: 480px) {
+  .grid {
+    margin: 0px 20px;
+  }
+}
 .right {
   animation-name: right-animation;
   animation-duration: 1s;

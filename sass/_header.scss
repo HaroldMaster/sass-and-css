@@ -22,8 +22,15 @@ body {
   margin: nth($margin-header, 1) nth($margin-header, 2) nth($margin-header, 3)
     nth($margin-header, 4);
   width: $header-column-width;
+  overflow-wrap: break-word;
+  overflow: hidden;
   img {
     max-width: $image-max-widht;
     height: $image-height;
   }
 }
+@media (max-width: 480px) {
+  .header {
+     font-size: $font-size-header-mobile;
+   }
+ }
