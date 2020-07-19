@@ -1,4 +1,4 @@
-$margin-header: (0px, -15px, 10px, 5px);
+$margin-header: (0px, 0px, 10px, 0px);
 $image-max-widht: 150px;
 $image-height: 100px;
 $header-width: 100%;
@@ -32,5 +32,10 @@ body {
 @media (max-width: 480px) {
   .header {
      font-size: $font-size-header-mobile;
+   }
+   .header__column{
+     img{
+       max-width: 90px;
+     }
    }
  }

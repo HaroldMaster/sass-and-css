@@ -15,7 +15,7 @@ body {
 
 .header__column {
   display: inline-block;
-  margin: 0px -15px 10px 5px;
+  margin: 0px 0px 10px 0px;
   width: 33.33%;
   overflow-wrap: break-word;
   overflow: hidden;
@@ -27,7 +27,11 @@ body {
 
 @media (max-width: 480px) {
   .header {
-    font-size: 10px;
+    font-size: 9px;
+  }
+
+  .header__column img {
+    max-width: 90px;
   }
 }
 .grid {
