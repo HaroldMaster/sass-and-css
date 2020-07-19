@@ -1,0 +1,29 @@
+$margin-header: (0px, -15px, 10px, 5px);
+$image-max-widht: 150px;
+$image-height: 100px;
+$header-width: 100%;
+$header-column-width: 33.33%;
+//HEADER
+body {
+  background-color: black;
+  color: white;
+}
+.header {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: $primary-font;
+  font-size: $font-size-header;
+  width: $header-width;
+}
+.header__column {
+  display: inline-block;
+  margin: nth($margin-header, 1) nth($margin-header, 2) nth($margin-header, 3)
+    nth($margin-header, 4);
+  width: $header-column-width;
+  img {
+    max-width: $image-max-widht;
+    height: $image-height;
+  }
+}

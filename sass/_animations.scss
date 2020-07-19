@@ -1,0 +1,81 @@
+$start-position: -20px;
+$finish-position: 0px;
+$rotation: 360deg;
+$animation-durtion: 1s;
+$transtion-duration: 3s;
+//mixin
+@mixin animation($name-animation) {
+  animation-name: $name-animation;
+  animation-duration: $animation-durtion;
+  position: relative;
+}
+//slide right
+.right {
+  @include animation(right-animation);
+}
+@keyframes right-animation {
+  0% {
+    background-color: $transition-color1;
+    right: $start-position;
+  }
+  100% {
+    background-color: $transition-color2;
+    right: $finish-position;
+  }
+}
+
+//slide left
+.left {
+  @include animation(left-animation);
+}
+@keyframes left-animation {
+  0% {
+    background-color: $transition-color1;
+    left: $start-position;
+  }
+  100% {
+    background-color: $transition-color2;
+    left: $finish-position;
+  }
+}
+//slide up
+.up {
+  @include animation(up-animation);
+}
+@keyframes up-animation {
+  0% {
+    background-color: $transition-color1;
+    bottom: $start-position;
+  }
+  100% {
+    background-color: $transition-color2;
+    bottom: $finish-position;
+  }
+}
+//slide down
+.down {
+  @include animation(down-animation);
+}
+@keyframes down-animation {
+  0% {
+    background-color: $transition-color1;
+    top: $start-position;
+  }
+  100% {
+    background-color: $transition-color2;
+    top: $finish-position;
+  }
+}
+//Rotate Y
+.rotY {
+  position: relative;
+  transform: rotateY($rotation);
+  transition: transform $transtion-duration ease-out;
+}
+
+//Rotate X
+.rotX {
+  position: relative;
+  transform: rotateX($rotation);
+  transition: transform $transtion-duration ease-out;
+}

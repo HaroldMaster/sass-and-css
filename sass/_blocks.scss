@@ -1,0 +1,36 @@
+$grid-margins: (0px, 50px);
+$grid-container-width: 100%;
+$grid-container-height: 100%;
+$grid-container-item-height: 160px;
+$grid-container-item-min-width: 50px;
+$button-width: 100%;
+$button-height: 100%;
+//Blocks
+.grid {
+  margin: nth($grid-margins, 1) nth($grid-margins, 2);
+}
+.grid__container {
+  display: grid;
+  grid-template-columns: auto auto;
+  height: $grid-container-height;
+  width: $grid-container-width;
+}
+.grid__container__item {
+  text-align: center;
+  height: $grid-container-item-height;
+  min-width: $grid-container-item-min-width;
+  button {
+    width: $button-width;
+    height: $button-height;
+    font-family: $primary-font;
+    font-size: xx-large;
+    font-weight: bold;
+    background-color: $sass-color;
+    color: $font-color-button;
+    overflow-wrap: break-word;
+  }
+  button:hover {
+    background-color: $css-color;
+    color: $font-color-button-hover;
+  }
+}
